@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container col-8 mt-5">
+      <h1 align="center" class="mb-10">Danh sách sản phẩm</h1>
+      <table class="table table-bordered">
+        <th>Ảnh</th>
+        <th>Tên</th>
+        <th>Giá</th>
+        <th>Mô tả</th>
+        <th>Sửa</th>
+        <th>Xóa</th>
+        <% for (let product of list ) { %>
+        <tr>
+          <td class="w-25">
+            <img class="w-25" src="/image/<%= product.images %>" alt="" />
+          </td>
+          <td c lass="w-20"><%= product.nameProduct %></td>
+          <td><%= product.priceProduct %></td>
+          <td><%= product.sortDescription %></td>
+          <td><a href="/update/<%= product.idProduct %>">Sửa</a></td>
+          <td>
+            <button class="btn btn-danger" onclick="history.back">
+              <a
+                class="text-decoration-none text-dark"
+                href="/delete/<%= product.idProduct %>"
+                >Xóa</a
+              >
+            </button>
+          </td>
+        </tr>
+        <% } %>
+      </table>
+    </div>
+  </body>
+</html>

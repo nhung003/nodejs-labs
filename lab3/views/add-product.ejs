@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div class="add_product">
+        <h2>Form thêm sản phẩm</h2>
+        <form action="/addnew" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Ten san pham</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="tensp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Gia san pham</label>
+              <input type="text" class="form-control" id="exampleInputPassword1" name="giasp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Hinh anh</label>
+                <input type="file" name="hinhsp" >
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Mo ta</label>
+                <input type="text-box" class="form-control"style="height: 200px" name="motasp">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+</body>
+</html>

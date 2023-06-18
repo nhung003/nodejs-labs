@@ -1,0 +1,33 @@
+{
+  "name": "nodebasic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec npx babel-node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoangvantho/node-js-basic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoangvantho/node-js-basic/issues"
+  },
+  "homepage": "https://github.com/hoangvantho/node-js-basic#readme",
+  "dependencies": {
+    "@babel/core": "7.15.5",
+    "@babel/node": "7.15.4",
+    "@babel/preset-env": "7.15.6",
+    "body-parser": "^1.20.1",
+    "dotenv": "10.0.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "formidable": "^2.1.1",
+    "mysql": "^2.18.1",
+    "mysql2": "2.3.0",
+    "nodemon": "^2.0.20"
+  }
+}

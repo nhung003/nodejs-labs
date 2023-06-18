@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <ul class="menu">
+                <li><a class="active" href="/">Trang chủ</a></li>
+                <li><a class="active" href="/shop">Sản phẩm</a></li>
+                <li><a href="/addnew"></a>Thêm sản phẩm</a></li>
+            </ul>
+        </div>  
+       <main align="center">
+            <h1>Chao mung ban ghe tham website</h1>
+            <% if(kindOfDay=='Chu nhat' || kindOfDay=='Thu bay'){ %>
+                <h2>Hom nay la cuoi tuan</h2>
+            <% } else { %>
+                <h2>Hom nay la <%= kindOfDay %></h2>
+            <% } %>
+       </main>
+    </div>
+</body>
+</html>

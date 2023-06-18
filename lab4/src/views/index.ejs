@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeJS cơ bản</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+ 
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+      
+    <div style="padding-left:16px">
+    
+        <table>
+            <h2>List user</h2>
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+                <% for(let i=0; i < dataUser.length; i++) { %>
+                    <tr>
+                        <td>
+                            <%= dataUser[i].id %>
+                        </td>
+                        <td>
+                            <%= dataUser[i].firstName %>
+                        </td>
+                        <td>
+                            <%= dataUser[i].lastName %>
+                        </td>
+                        <td>
+                            <a href="/detial/user/<%= dataUser[i].id %>" target="_blank">Detail</a>
+                            <form action="/edit-user/<%= dataUser[i].id %>" method="GET">
+                                <button type="submit">Edit</button>
+                            </form>
+                            
+                            <form action="/delete-user" method="POST">
+                                <input type="text" hidden value="<%= dataUser[i].id %>" name="userId"/>
+                                <button type="submit">Delete</button>
+                            </form>
+                            
+                        </td>
+                    </tr>
+                    <% } %>
+            </tbody>
+    
+    
+        </table>
+    
+    </div>
+    <div class="create-user-container">
+        <form action="/create-new-user" method="POST">
+            <div><b> Create a new user:</b></div>
+            <div>
+                <label for="">First Name:</label>
+                <input type="text" name="firstName"/>
+            </div>
+            <div>
+                <label for="">Last Name:</label>
+                <input type="text" name="lastName"/>
+            </div>
+            <div>
+                <label for="">Email:</label>
+                <input type="email" name="email"/>
+            </div>
+            <div>
+                <label for="">Address</label>
+                <input type="text" name="address"/>
+            </div>
+            <div>
+                <button type="submit" class="btn-submit">submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

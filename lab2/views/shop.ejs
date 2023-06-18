@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    
+  </head>
+  <body>
+    <div class="container">
+        <div class="head">
+            <ul class="menu">
+                <li><a class="active" href="/">Trang chủ</a></li>
+                <li><a class="active" href="/shop">Sản phẩm</a></li>
+                <li><a href="/addnew"></a>Thêm sản phẩm</a></li>
+            </ul>
+        </div> 
+      <div class="sanpham">
+        <% for(let product of products){%>
+
+        <div class="cot">
+          <div class="name"><h3><%=product.title%></h3></div>
+          <img src="images/<%=product.imageURL%>" alt="" />
+          <div class="price">$<%=product.price%></div>
+          <div class="mota"><%=product.description%></div>
+          <button type="submit">Add to cart</button>
+        </div>
+        <%}%>
+      </div>
+    </div>
+  </body>
+</html>
